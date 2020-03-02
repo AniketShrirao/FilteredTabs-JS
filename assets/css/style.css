@@ -181,6 +181,12 @@ main h2::before {
 .galleryLink:hover {
   background: #69ad31;
   color: rgba(255,255,255,0.9);
+  transition: all 0.3s ease;
+}
+
+.Project img:hover { 
+  box-shadow: 10px 9px 5px #aaaaaa;
+  transition: all 0.3s ease;
 }
 
 .projects {
@@ -190,7 +196,7 @@ main h2::before {
 }
 
 .projects figure { padding:10px; }
-.show { display: flex; }
+.show { display: inline-block; }
 .hide { display: none; }
 
 /*=================================
