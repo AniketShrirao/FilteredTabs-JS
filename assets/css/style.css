@@ -125,12 +125,73 @@ header {
   main styling starts here
 =================================*/
 
+main .wrapper {
+  padding: 100px 0 114px; 
+  text-align: center;  
+}
 
+main h2 {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  font-size: 36px;  
+  color: #333;
+  position: relative;
+}
 
+main h2::before {
+  content: '';
+  width: 6%;
+  height: 3px;
+  background: #69ad31;
+  position: absolute;
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  left: 47%;
+  top: 81.5%;
+}
 
+.galleryLinks { 
+  margin: 64px 0 41px;
+  display: flex;
+  justify-content: center;
+}
 
+.galleryLink a { 
+  padding: 11px 14px;
+  color: #fff;
+  font-weight: 700;
+}
 
+.galleryLink {
+  margin: 0 9.8px;
+  background: #e5e5e5;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
 
+.tabActive{
+  background: #69ad31;
+  color: rgba(255,255,255,0.9);
+}
+
+.galleryLink { border-radius: 4px; }
+
+.galleryLink:hover {
+  background: #69ad31;
+  color: rgba(255,255,255,0.9);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects figure { padding:10px; }
+.show { display: flex; }
+.hide { display: none; }
 
 /*=================================
   main styling ends here
