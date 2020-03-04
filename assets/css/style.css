@@ -192,7 +192,7 @@ main h2::before {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:flex-start;
 }
 
 .projects figure { padding:10px; }
@@ -202,25 +202,3 @@ main h2::before {
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
