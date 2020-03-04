@@ -1,51 +1,52 @@
 /* Author: Aniket*/
-
-function FilteredTabs() {
-  var tabHead = document.querySelectorAll(".galleryLinks li");
-  var tabBody = document.querySelectorAll(".projects li");
+// Get Tab heading links and tab content images
+var tabHead = document.querySelectorAll(".galleryLinks li");
+var tabcontent = document.querySelectorAll(".projects li");
+//Filtered Tab Function Started
+function FilteredTabs(tabHead,tabcontent) {
   var tabLinks = Array.from(tabHead);
-  var tabContent = Array.from(tabBody);
-
+  //Assign click function to every tabLink 
   tabLinks.forEach(function(e) {
-    e.addEventListener("click", TabsofGallery);
+    e.addEventListener("click", Filter);
   });
-
+  //Make first tab Link active at start
   function firstActive() {
     for (var link in tabLinks) {
       if(tabLinks[link] === tabLinks[0])
-        preActive(tabLinks[link]);
+        MakeItActive(tabLinks[link]);
     }
   }
   firstActive();
-
-  function TabsofGallery(evt) {
+// Tabs Filtering Function started
+  function Filter(evt) {
     var currentTab = evt.currentTarget;
+    // remove active from all tab links
     for( tab in tabLinks) {
       tabLinks[tab].classList.contains('tabActive');
       tabLinks[tab].classList.remove('tabActive');    
     }
+    // Make clicked tab only active
     currentTab.classList.add('tabActive');
-
     var currentClasses = currentTab.classList;
     var currentClass  = currentClasses[1];
-
-    tabBody.forEach(function(j){
+    // check weather the the tab links class matches with the images class
+    // if matches make it visible accordingly
+    tabcontent.forEach(function(image){
       if(currentClass === "All") {
-        j.classList.remove("hide");
-        j.classList.add('show');
-      } else if(currentClass === j.classList[1]) {
-      j.classList.remove("hide");
-      j.classList.add('show');
-      }
-      else {
-        j.classList.add("hide");  
+        image.classList.remove("hide");
+        image.classList.add('show');
+      } else if(currentClass === image.classList[1]) {
+        image.classList.remove("hide");
+        image.classList.add('show');
+      } else {
+        image.classList.add("hide");  
       }
     })
-    }
-
-  function preActive(currentTabLink) {
+  }
+// Make Selected tabLink Active on event fire
+  function MakeItActive(currentTabLink) {
     currentTabLink.className += " tabActive";
   }
 }
-
-FilteredTabs();
+// calling filteredTab Function
+FilteredTabs(tabHead,tabcontent);
