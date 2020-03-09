@@ -195,6 +195,21 @@ main h2::before {
   justify-content:flex-start;
 }
 
+.Project {
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .projects figure { padding:10px; }
 .show { display: inline-block; }
 .hide { display: none; }
