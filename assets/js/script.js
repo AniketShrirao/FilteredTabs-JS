@@ -39,6 +39,7 @@ function FilteredTabs(tabHead,tabcontent) {
         image.classList.remove("hide");
         image.classList.add('show');
       } else {
+        image.classList.remove('show');
         image.classList.add("hide");  
       }
     })
